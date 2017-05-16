@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jscode.js">
+	
+</script>
+</head>
+<body>
+<input type="button" onclick="sayfood()" value="Please press here!">
+<script type="text/javascript">
+	var name = " David";
+	/*var can be:
+	boolean = true/false
+	strings = abc
+	numbers = 123 */
+
+	var food = [" nasi lemak? ", " nasi goreng? ", " ais kacang? "];
+	//array have to one word
+
+	var subtotal = (13 +1)*5; //subtotal is 70
+	var shipping = 0.5*(13+1); //Shipping is 7
+	var total = subtotal + shipping; //total is 77
+
+	console.log(food[1]);
+	console.log(subtotal);
+	console.log(shipping);
+	console.log(total);
+
+	function sayfood(){
+	alert("Hello and welcome!" + name + ",would you like to have" + food[1])
+	alert("RM"+total)
+}
+</script>
+</body>
+</html>
