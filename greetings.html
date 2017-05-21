@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+	<title>Greetings</title>
+
+</head>
+<body>
+<h1 id = 'greetings'></h1>
+	<script type="text/javascript">
+		var today = new Date();
+		var hours = today.getHours();
+		var time = today.getTime();
+		var min = today.getMinutes();
+		var msg = greetUser() + ' ,your time is ' + hours + ':' + min;
+
+		function greetUser(){
+			var msg = "";
+			if(hours<=12){
+				msg = 'Good morning';
+			}
+			else if (hours>=13){
+				msg = 'Good afternoon';
+			}
+			else if(hours>=18){
+				msg = 'Good evening';
+			}
+			else if(hours>=23){
+				msg = 'Good night';
+			}
+			return msg;
+		}
+		document.write(msg);
+		document.getElementById('greetings').innerHTML = 'Hello!';
+	</script>
+
+</body>
+</html>

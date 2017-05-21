@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+	<title>object constructor</title>
+</head>
+<body>
+<script type="text/javascript">
+	function Hotel(name, rooms, booked){
+		this.name = name;
+		this.rooms = rooms;
+		this.booked = booked;
+		this.checkAvailablity = function(){
+			return this.rooms - this.booked;
+		};
+	} 
+	var h = new Hotel("Hilton", 50 , 40);
+	console.log(h);
+	console.log("Hotel: " + h.name + ", available rooms:" + h.checkAvailablity());
+
+	var h2 = new Hotel("Hills",100, 50);
+	console.log(h2)
+	console.log("Hotel:" + h2.name + ",available rooms:" + h2.checkAvailablity());
+</script>
+</body>
+</html>

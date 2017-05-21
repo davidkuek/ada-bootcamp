@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>for loop java</title>
+</head>
+<body>
+<input type="button" onclick ="numberofrounds()" value="Round">
+<script type="text/javascript">
+	var scores = [24 ,32, 17];
+	var arrayLength = scores.length; //items in array
+	var roundNumber = 0;
+	var msg = "";
+
+	for (var i = 0; i<arrayLength; i++){
+		roundNumber =(i + 1);
+		msg += 'Round' + roundNumber + ':';
+		msg +=scores[i] + '\n';
+	}
+	function numberofrounds(){
+		alert (msg);
+	}
+	console.log(msg);
+</script>
+
+</body>
+</html>

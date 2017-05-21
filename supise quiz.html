@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+	<title>suprise quiz</title>
+</head>
+<body>
+<script type="text/javascript">
+	function minMaxAvg(arr){
+		var min = arr[0];
+		var max = arr[0];
+		var sum = arr[0];
+
+		for (var i = 1; i < arr.length; i++) {
+			if (arr[i] > max){
+				max = arr[i];
+			}
+			if (arr[i] < min){
+				min = arr[i];
+			}
+			sum = sum + arr[i];
+
+	}
+			var avg = sum/arr.length;
+			
+			return [min,max,avg];
+}
+	var numbers = minMaxAvg([0,-3,5,9,10]);
+
+	console.log(numbers);
+
+</script>
+
+</body>
+</html>

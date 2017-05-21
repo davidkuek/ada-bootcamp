@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>java if</title>
+</head>
+<body>
+<input type="button" onclick="result()" value="Your result">
+<script type="text/javascript">
+	var score = 70; //Score
+	var msg; // Message
+
+	if (score >=50){
+		msg = 'Congratulations!';
+		msg += ' Proceed to the next round';
+	}
+	else {
+		msg = 'You failed!';
+		msg +=' Please try again.';
+	}
+	function result(){
+		alert(msg);
+	}
+
+	console.log(msg)
+</script>
+</body>
+</html>

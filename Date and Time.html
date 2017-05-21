@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+	<title>Date and Time</title>
+	<<script type="text/javascript">
+		var today = new Date();
+		var year = today.getFullYear();
+		var firstClass = new Date('May 13, 2017 09:00:00')
+		var difference = today.getTime()-firstClass.getTime();
+		var differenceIndays = difference/86400000; 
+		// today seconds = 60s * 60 mins * 24 hours = 86400000
+		// or var day_in_seconds = 864000000
+		// var differenceIndays  = difference/day_in_seconds;
+		var msg = Math.floor(differenceIndays) + ' days since we start coding!';
+		document.write(msg);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
