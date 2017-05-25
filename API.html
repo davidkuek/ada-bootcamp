@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>api</title>
+</head>
+<body>
+<div id = "sample">
+<button type = "button" onclick ="loadDoc()">Load</button>
+</div>
+<script type="text/javascript">
+	function loadDoc(){
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+			// Ready state = Document is completely downloaded
+			// status 200 = correct
+			if (this.readyState == 4 && this.status ==200){
+				var json = JSON.parse(this.responseText);
+				document.getElementById("sample").innerHTML = "Name: " + json.results[0].name.first + " " + json.results[0].name.last + 
+				"<br>" + "Date of Birth: " + json.results[0].dob + 
+				"<br>" + "Email: " + json.results[0].email + 
+				"<br>" + "Phone number: " + json.results[0].phone + 
+				"<br>" + "Address: " + json.results[0].location.street + 
+				"<br>" + "Photo: "+ '<img src ="'+ json.results[0].picture.large +'"/>';
+			}
+		};
+		xhttp.open("GET","http://www.randomuser.me/api", true);
+		xhttp.send();
+	}
+</script>
+</body>
+</html>

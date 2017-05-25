@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>AJAX</title>
+
+</head>
+
+    
+
+<body>
+
+  <!-- First name: <input type="text" name="firstName"><br> -->
+
+  <!-- Last name: <input type="text" name="lastName"><br> -->
+
+<div id="sample">
+
+        <button type="button" onclick="post()">post</button>
+
+    </div>
+
+    <script type="text/javascript">
+
+        function post(){
+
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function() {
+
+                if (this.readyState == 4 && this.status ==200){
+
+                    //document.getElementById('sample').innerHTML = this.responseText;
+
+                    alert("Successful");
+
+                }
+
+            };
+
+            var body = '{"firstName": "first", "lastName": "last", "email": "email@example.com"}'
+            xhttp.open("POST", "https://sheetsu.com/apis/v1.0/f7b7d0f66d1d", true);
+            xhttp.setRequestHeader("Content-type", "application/json")
+            xhttp.send(body);
+
+        }
+
+    </script>
+    <H1>Users</H1>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>My CV</title>
+</head>
+<body>
+<style src= "My resume.css">
+</style>
+<script type="text/javascript">
+loadDoc();
+		function loadDoc(){
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+			// Ready state = Document is completely downloaded
+			// status 200 = correct
+			if (this.readyState == 4 && this.status ==200){
+				var json = JSON.parse(this.responseText);
+				document.getElementById("name").innerHTML =  json.results[0].name.first + " " + json.results[0].name.last; 
+				document.getElementById("myimage").innerHTML = '<img src ="' + json.results[0].picture.large + '"/>'
+				}
+		};
+		xhttp.open("GET","http://www.randomuser.me/api", true);
+		xhttp.send();
+	}
+
+
+
+</script>
+<div id = "myimage"></div>
+
+	<h1><span id ="name"></span></h1>
+	<p>A self motivated geek who has passion for coding and wanted to be part of the tech development industry.</p>
+	<hr>
+	
+	<h2>Experiences</h2>
+	<ul>
+		<li style="color: rgba(37,43,61,0.5);">Uber Partner <em>2017-present</em></li>
+		<li>Helpdesk at Wincor Nixdorf <em>2016-2017</em></li>
+	</ul>
+
+	<h2>Skills</h2>
+	<ol>
+		<li>Html <a href="file:///C:/github%20david/david/hello.html">My first website</a></li>
+		<li>Basics IT management skills</li>
+	</ol>
+	<h2>Education</h2>
+	<ul>
+		<li>A levels Tar College</li>
+		<li>Asia developer Acedemy Bootcamps</li>
+	</ul>
+</body>
