@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+	<title>get and set attribute</title>
+	<script src = "jquery-3.2.1.min.js"></script>
+	<style>
+	.green {background:green;}
+	.yellow {background:yellow;}
+	.red {background:red;}
+	</style>
+</head>
+<body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('div p').addClass("green");
+		$('div').siblings().addClass('yellow');
+		$('ul li:first').addClass('red');
+	})
+</script>
+	<div>
+		<p>This is a paragraph</p>
+		<p>This is another paragraph</p>
+		<p>This is yet another paragraph which has a list:
+		<ul>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+		</ul>
+		</p>
+		</div>
+		<p>This is a paragraph outside</p>
+		<p>This is another paragraph outside div.</p>
+</body>
+</html>

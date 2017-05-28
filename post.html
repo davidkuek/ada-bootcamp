@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>POST</title>
+</head>
+<body>
+<div id = "sample">
+<button type = "button" onclick ="post()">Post</button>
+</div>
+<script type="text/javascript">
+	function post(){
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+			// Ready state = Document is completely downloaded
+			// status 200 = correct
+			if (this.readyState == 4 && this.status ==200){
+		var json = JSON.parse(this.responseText);
+		document.getElementbyID("usertable").innerHTML += "<tr><td>" + json[0].firstName + " " + json[0].lastName + "</td><td>" + json[0].email + "</td></tr>";
+			}
+		};
+
+		xhttp.open("GET","https://sheetsu.com/apis/v1.0/e6daeda1038b", true);
+		xhttp.send();
+</script>
+<table border="1" id = "usertable">
+<tr><th>Name</th><th>Email</th></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>POST</title>
+	<script src = "jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$.getJSON("https://sheetsu.com/apis/v1.0/e6daeda1038b",
+			function(json, result){
+				for (var i = 0; i < json.length; i++) {
+					document.getElementById("usertable").innerHTML += "<tr><td>" + json[i].firstName + " " + json[i].lastName + "</td><td>" + json[i].email + "</td></tr>";
+				}
+			});
+	});
+
+
+
+		/*var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+			// Ready state = Document is completely downloaded
+			// status 200 = correct
+			if (this.readyState == 4 && this.status ==200){
+			var json = JSON.parse(this.responseText);
+			for (var i = 0; i < json.length; i++) {
+				document.getElementById("usertable").innerHTML += "<tr><td>" + json[i].firstName + " " + json[i].lastName + "</td><td>" + json[i].email + "</td></tr>";
+			}
+			}
+		};
+
+		xhttp.open("GET","https://sheetsu.com/apis/v1.0/e6daeda1038b", true);
+		xhttp.send(); 
+		*/
+</script>
+<table border="1" id = "usertable">
+<tr><th>Name</th><th>Email</th></tr>
+</table>
+</body>
+</html>
