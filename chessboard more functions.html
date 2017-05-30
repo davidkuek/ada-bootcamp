@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+	<title>chess board more functions</title>
+</head>
+<body>
+<script type="text/javascript">
+		function printHorizontal(n,icon){
+			var msg = "";
+			for (var i = 1; i <= n; i++) {
+				if (i%2 !==0)
+					msg += icon;
+				else if (i%2==0)
+					msg += " ";
+			}
+			return msg;
+		}
+
+		function printVertical(r,n,icon){
+			var secondmsg = "";
+			for (var j = 1; j <= r; j++) {
+				if (j%2!==0)
+					secondmsg+= printHorizontal(n,icon) + "\n"		
+				else if (j%2==0)
+					secondmsg += " " + printHorizontal(n-1,icon) + "\n";		
+			}
+			return secondmsg;
+
+		}
+		console.log(printVertical(9,9,"#"));
+		
+</script>
+</body>
+</html>

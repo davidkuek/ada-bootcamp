@@ -1,0 +1,90 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<meta charset="utf-8">
+
+<head>
+
+    <title>challenge 2</title>
+
+</head>
+
+<body>
+
+<input type="text" id="text">
+
+<button onclick="submit()">Click me!</button>
+
+<script type="text/javascript">
+
+    function submit(){
+
+        var num = "";
+
+        num = document.getElementById("text").value;
+
+        var array = "";
+
+        array = num.split(",");
+
+        var c=array.map(Number);
+
+        minMaxAvg(c);
+
+        console.log(c);
+
+        function minMaxAvg(arr) {
+
+    var max = arr[0];
+
+    var min = arr[0];
+
+    var sum = arr[0];
+
+    for (var i = 1; i<arr.length; i++)
+
+    {
+
+        if (arr[i] > max) {
+
+            max= arr[i];
+
+        }
+
+        if (arr[i] > max) {
+
+            min = arr[i];
+
+        }
+
+        sum = sum + arr[i];
+
+    }
+
+    var avg = sum / arr.length;
+
+    
+
+    console.log('minimum ' +  min)
+
+    console.log( 'maximum ' + max)
+
+    console.log('average ' + avg)
+
+        return [ max, min, avg];
+
+}
+
+        
+
+    }
+
+</script>
+
+</body>
+
+</html>
+

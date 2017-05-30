@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+	<title>chess</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function chess(n){
+			var msg = "";
+			for (var i = 1; i < n; i++) {
+				if(i % 2 !==0)
+					msg += "# # # # #" + "\n";
+				else if (i % 2 ==0)
+					msg += " # # # # " + "\n";
+			}
+			return msg;
+		}
+			console.log(chess(9));
+	</script>
+
+</body>
+</html>
