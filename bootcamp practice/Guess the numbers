@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+	<title>challenge 1.6.17 </title>
+</head>
+<body>
+<h1 id="header">Guess the number!</h1>
+<h2 id="header 2">Enter the number</h2>
+<input type="text" id="text">
+<button id ="button" onclick="clickMe()">Click me</button>
+<div id="bottom">
+</div>
+<script type="text/javascript">
+	var counter = 3;
+	var chosen = Math.floor((Math.random()*100)+1);
+	var msg = document.getElementById("bottom");
+
+
+	function clickMe(){
+
+		var num = document.getElementById("text").value;
+		if (num == chosen){
+			msg.innerHTML += "Correct!" + "<br>";
+		}
+		else if (num<chosen){
+			msg.innerHTML += "You are guessing too low!" + "(" + num + ")" + counter + "guess left" + "<br>";		
+		}
+		else if (num>chosen){
+			msg.innerHTML += "You are guessing too high!" + "(" + num + ")" + counter + "guess left" + "<br>";		
+		}
+		counter--;
+		
+		if (counter<1){
+			document.getElementById("button").disabled = true;
+			msg.innerHTML += "Answer is: " + chosen;
+		}
+
+	}
+</script>
+</body>
+</html>
