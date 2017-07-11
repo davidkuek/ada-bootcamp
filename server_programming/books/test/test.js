@@ -1,0 +1,19 @@
+var assert = require('assert');
+var chai = require('chai');
+var chaiHttp = require('chai-http');
+var should = chai.should();
+var server = require('../server.js');
+
+chai.use(chaiHttp);
+describe('/GET book',function(){
+	it('it should GET all the books',function(done){
+		chai.request(server)
+		.get('/api/books')
+		.end(function(err,res){
+			res.should.have.status(200);
+			res.body.should.be.a('array');
+			//res.body.length.should.be.eq1(0);
+			done();
+		});
+	});
+});

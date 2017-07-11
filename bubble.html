@@ -1,0 +1,30 @@
+<script type="text/javascript">
+
+
+function swapArray(array,indexA,indexB){
+
+	var x = array[indexA];
+	array[indexA] = array[indexB];
+	array[indexB] = x;
+};
+
+function bubbleSort(array,indexA,indexB){
+for (var j = 0; j < array.length; j++) {
+	
+
+	for (var i = 0; i < array.length; i++) {
+	var indexA = array[i];
+	var indexB = array[i+1];
+		if (array[i]>array[i+1]){
+			swapArray(array,i,i+1);
+		}
+	
+	}
+}
+
+	return array;
+}
+
+console.log(bubbleSort([3,1,4,2,5,9,6,7,8]));
+
+</script>
