@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+	<title>fizzbuzz</title>
+</head>
+<body>
+<p>A programm will print numbers from 1-max with the condition of: <br/>number divisible by 3 will return "fizz" <br/>number divisible by 5 will return "buzz"<br/>number divisible by 3 and 5 return "fizzbuzz"</p>
+<input type="text" id = "input" name="input" placeholder="Insert the last number">
+<button onclick="fizzBuzzOutput()">Fizzbuzz!</button>
+<p id="output"></p>
+<script type="text/javascript">
+		function fizzBuzz(){ 
+		var msg ="";
+		var num = document.getElementById("input").value;
+		for (var i = 1; i <= num; i++) {
+			
+			if ( i % 15 ==0)
+    			msg += "fizzbuzz" + ', ';
+			else if (i % 3 ==0)
+				msg += "fizz" + ', ';
+			else if (i % 5 ==0)
+				msg += "buzz" + ', ';
+			else msg +=  i + ', ';
+	} 
+	return msg;
+}
+
+function fizzBuzzOutput(){
+	document.getElementById('output').innerHTML = fizzBuzz();
+	
+}
+
+	console.log(fizzBuzz());
+</script>
+</body>
+</html>

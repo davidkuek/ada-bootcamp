@@ -10,8 +10,8 @@ router.route('/books').post(function(req,res){
 
 	if(!req.body.title ||
 	!req.body.author ||
-	!req.body.year.toString().match(/^[0-9]\.[0-9]{4}$/g) ||
-	!req.params.pages.toString().match(/^[0-9]$/g)){
+	!req.body.year.toString().match(/^[0-9]{4}$/g) ||
+	!req.body.pages.toString().match(/^[0-9]{1,}$/g)){
 	res.status(400);
 	res.json({message: "Bad Request"});
 
@@ -23,7 +23,10 @@ router.route('/books').post(function(req,res){
 	books.year = req.body.year;
 	books.pages = req.body.pages;
 
-	res.json({message: 'Book created!'});
+	books.save(function(err){
+		if(err) res.send(err);
+		res.json({message: 'Book created!'});
+	});
 }
 });
 

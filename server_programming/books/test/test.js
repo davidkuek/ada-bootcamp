@@ -17,3 +17,21 @@ describe('/GET book',function(){
 		});
 	});
 });
+
+chai.use(chaiHttp);
+describe('/POST book',function(){
+	it('it should POST all the books',function(done){
+
+	var books = {"title": "Programming basics", "author": "Author V", "year": 2017, "pages": 500};
+
+		chai.request(server)
+		.post('/api/books')
+		.send(books)
+		.end(function(err,res){
+			res.should.have.status(200);
+			res.body.should.be.a('object');
+			res.body.should.have.property("title");	
+			done();
+		});
+	});
+});
