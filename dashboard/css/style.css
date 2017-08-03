@@ -1,0 +1,111 @@
+body{
+	background-color: #ededef;
+}
+
+
+.navbar{
+	border-radius: 0px;
+	min-height: 33px !important;
+	margin-bottom: 0px;
+}
+
+.navbar-nav > li > a, .navbar-brand{
+	height: 33px;
+	padding-top: 6px;
+	padding-bottom: 0px;
+}
+
+.breadcrumb{
+	background-color: #cccccc; 
+	color: #333333;
+}
+
+.navbar-default {
+  background-color: #435fcc;
+  border-color: #435fcc;
+}
+.navbar-default .navbar-brand {
+  color: #fbfbfb;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #f7f6f7;
+}
+.navbar-default .navbar-text {
+  color: #fbfbfb;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #fbfbfb;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #f7f6f7;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #f7f6f7;
+  background-color: #8ba1f7;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #f7f6f7;
+  background-color: #8ba1f7;
+}
+.navbar-default .navbar-toggle {
+  border-color: #8ba1f7;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #8ba1f7;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fbfbfb;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #fbfbfb;
+}
+.navbar-default .navbar-link {
+  color: #fbfbfb;
+}
+.navbar-default .navbar-link:hover {
+  color: #f7f6f7;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #fbfbfb;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #f7f6f7;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #f7f6f7;
+    background-color: #8ba1f7;
+  }
+}
+
+header{
+	background-color: #1b1b1c;
+	color: white;
+	padding: 10px;
+	margin-bottom: 30px;
+}
+
+.list-group > .active{
+	background-color: #435fcc;
+}
+
+.progress-bar{
+	background-color: #333333;
+}
+
+.panel-heading{
+	background-color: #435fcc;
+	color: white;
+}
